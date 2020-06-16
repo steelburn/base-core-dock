@@ -1,5 +1,5 @@
 #!/bin/sh
-cd eLeaveTenantCore
+cd /app
 # npm i
 npm run doc:build
 # npm run test
@@ -12,4 +12,3 @@ npm run test
 cp -rf html-report /www/html/test-report/
 cp -rf documentation /www/html/documentation
 
-# thttpd -p 3001 -d /var/www
