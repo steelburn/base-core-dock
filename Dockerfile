@@ -1,7 +1,7 @@
 FROM alpine
 COPY run.sh .
 RUN apk add --no-cache git nodejs npm python3 make curl && \
-	npm i -g npm@latest
+	npm i -g npm@latest jest-cli
 
 WORKDIR .
 CMD ["sh", "run.sh"]
