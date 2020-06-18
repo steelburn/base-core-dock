@@ -1,4 +1,5 @@
 #!/bin/sh
+NG_CLI_ANALYTICS=ci
 
 # Initialization: 
 # Do a clean slate & clone repo from git if $GITREPO variable is set
