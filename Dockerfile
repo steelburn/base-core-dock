@@ -1,7 +1,9 @@
 FROM alpine
 COPY run.sh .
-RUN apk add --no-cache git nodejs npm python3 make curl && \
+RUN apk add --no-cache git nodejs npm python3 make curl openssh && \
 	npm i -g npm@latest jest-cli
+RUN echo "IdentityFile /etc/keys/repo-key" >> /etc/ssh/ssh_config && \
+    echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config	
 
 WORKDIR .
 CMD ["sh", "run.sh"]
